@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import CheckOut from '../Checkout/CheckOut';
 import useServices from '../Hooks/useServices';
 import ServiceDetails from './ServiceDetails';
 
@@ -9,7 +10,8 @@ const Services = () => {
 
     const handleAddToCheckout =(service)=>{
 console.log('hello');
-        
+        const newCheckOut =[...checkOut,service];
+        setCheckOut(newCheckOut);
         }
 
     return (
@@ -27,6 +29,9 @@ console.log('hello');
               service.map(services =>(<ServiceDetails key={services.id} services ={services} handleAddToCheckout={handleAddToCheckout}></ServiceDetails>))
           }
 
+            </div>
+            <div className="checkout">
+                <CheckOut checkOut={checkOut}/>
             </div>
         </div>
     );
