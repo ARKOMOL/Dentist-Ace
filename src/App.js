@@ -4,6 +4,7 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Banner from './Component/Banner/Banner';
 import Header from './Component/Header/Header';
+import Services from './Component/Service/Services';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header/>
       <Banner/>
       </div>
+      <Services/>
 {/* Route  */}
 
       <Routes>

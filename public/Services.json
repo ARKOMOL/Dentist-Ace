@@ -1,0 +1,38 @@
+[
+    {  "id":1,  
+        "name":"Root Canal",
+        "price":"100$",
+        "img": "https://images.unsplash.com/photo-1643401142249-84ef35c123c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "description":"I can do it smootly"
+    },
+    { "id":2,
+        "name":"ALignment Teeth",
+        "price":"100$",
+        "img": "https://images.unsplash.com/photo-1643401142249-84ef35c123c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "description":"I can do it smootly"
+    },
+    { "id":3,
+        "name":"Cosmetic Teeth",
+        "price":"100$",
+        "img": "https://images.unsplash.com/photo-1643401142249-84ef35c123c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "description":"I can do it smootly"
+    },
+    { "id":4,
+        "name":"Oral Hygiene",
+        "price":"100$",
+        "img": "https://images.unsplash.com/photo-1643401142249-84ef35c123c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "description":"I can do it smootly"
+    },
+    { "id":5,
+        "name":"Live Advisory",
+        "price":"100$",
+        "img": "https://images.unsplash.com/photo-1643401142249-84ef35c123c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "description":"I can do it smootly"
+    },
+    { "id":6,
+        "name":"Cavity Inspection",
+        "price":"100$",
+        "img": "https://images.unsplash.com/photo-1643401142249-84ef35c123c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "description":"I can do it smootly"
+    }
+]
