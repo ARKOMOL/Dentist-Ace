@@ -4,8 +4,8 @@ import useServices from '../Hooks/useServices';
 import ServiceDetails from './ServiceDetails';
 
 const Services = () => {
-    const [checkOut,setCheckOut] =useState([])
-    const [service,setService] =useServices()
+    const [checkOut,setCheckOut] =useState([]);
+    const [service,setService] =useServices([]);
     // console.log(serivce);
 
     const handleAddToCheckout =(service)=>{
@@ -30,9 +30,9 @@ console.log('hello');
           }
 
             </div>
-            <div className="checkout">
+            {/* <div className="checkout">
                 <CheckOut checkOut={checkOut}/>
-            </div>
+            </div> */}
         </div>
     );
 };

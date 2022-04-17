@@ -13,6 +13,7 @@ import CheckOut from './Component/Checkout/CheckOut';
 import Login from './Component/Login/Login';
 import SignUp from './Component/SignUp/SignUp';
 
+
 function App() {
   return (
     <div className="App">
@@ -26,7 +27,11 @@ function App() {
          <Route path='/' element={<Home/>} ></Route>
          <Route path='/blogs' element={<Blogs/>}/>
          <Route path='/contact' element={<Contact/>}/>
-         <Route path='/checkout' element={<CheckOut/>} />
+         <Route path='/checkout' element={
+           
+         <CheckOut/>
+         
+         } />
          <Route path='/about' element={<About/>}/>
          <Route path='/login' element={<Login/>}/>
          <Route path='/signup' element={<SignUp/>}/>
