@@ -1,5 +1,5 @@
 import React, { useReducer, useRef, useState } from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css';
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
@@ -18,34 +18,39 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
     
-    const navigate = useNavigate();
+
+    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+
+    // const navigate = useNavigate();
+    // const location = useLocation();
+    // let from = location.state?.from?.pathname || '/';
+
+    const navigate =useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || '/';
-
+    // let gFrom = location.state?.from?.pathname || '/';
 
  /*google login  */
- const signInWithGoogle = () =>{
-     signInWithPopup(auth,googleProvider)
-     .then(result =>{
-         const user = result.user;
-         console.log(user);
-     })
+//  const signInWithGoogle = () =>{
+//      signInWithPopup(auth,googleProvider)
+//      .then(result =>{
+//          const user = result.user;
+//          console.log(user);
+//      })
   
- }
+//  }
 
-
-    // const handleEmailBlur = event => {
-    //     setEmail(event.target.value);
-    // }
-
-    // const handlePasswordBlur = event => {
-    //     setPassword(event.target.value);
-    // }
     const emailRef = useRef('')
     const passRef = useRef('');
 
+    // if (user) {
+    //     navigate(from, {replace: true});
+    // }
     if (user) {
-        navigate(from, {replace: true});
+        navigate(from,{replace:true})
+    }
+    if (gUser) {
+        navigate(from,{replace:true})
     }
 
     const handleUserSignIn = event => {
@@ -79,7 +84,7 @@ const Login = () => {
                 <p>
                     New to Dentist Ace? <Link className='form-link' to="/signup">Create an account</Link>
                 </p>
-                <button  onClick={signInWithGoogle}> Google</button>
+                <button  onClick={()=> signInWithGoogle()}> Google</button>
 
             </div>
         </div>
