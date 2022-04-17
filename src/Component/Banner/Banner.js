@@ -2,7 +2,7 @@ import React from 'react';
 import banner from '../images/baner.jpg'
 const Banner = () => {
     return (
-        <div className='container mx-auto  flex flex-row '>
+        <div className='container mx-auto py-6  mb-5 flex flex-row '>
             <div className="banner-text px-8">
                 <h3 className='text-2xl pb-4 text-sky-400'>
                     WELCOME TO DENTIST ACE 
@@ -14,8 +14,8 @@ const Banner = () => {
                     Looking for a Dentist in Your local area.I am providing you a high range of general and dental services near you.
                 </p>
             </div>
-            <div>
-                <img src={banner} alt="" />
+            <div >
+                <img className=' rounded-lg ' src={banner} alt="" />
             </div>
         </div>
     );

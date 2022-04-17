@@ -1,8 +1,16 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../Firebase/Firebase.init';
 import CustomLink from '../CustomLink/CustomLink';
 
 const Header = () => {
+    const [user] = useAuthState(auth);
+
+    const handleSignOut = () =>{
+        signOut(auth);
+    }
     return (
         <div className='sticky toPp-0 bg-slate-200 px-12 py-8 flex justify-center md:justify-between'>
             <div className='hidden md:block'>
@@ -18,7 +26,11 @@ const Header = () => {
             
             <CustomLink to="/contact">Contact</CustomLink>
             <CustomLink to="/about">About</CustomLink>
-            <CustomLink to="/login">Login</CustomLink>
+            {
+                    user ?
+                    <button className='bg-sky-500 rounded-full px-2 ' onClick={handleSignOut}>Sign out</button>
+                    :
+                    <CustomLink to="/login">Login</CustomLink>}
             </div>
         </div>
     );
