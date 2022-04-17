@@ -1,63 +1,94 @@
-.form-container {
-    width: 600px;
-    margin: 0 auto;
-    border: 1px solid #95A0A7;
+.login-container {
+    position: relative;
+    width: 350px;
+    margin: 4rem auto;
+    height: 530px;
+    border-radius: 20px;
+    padding: 40px;
     box-sizing: border-box;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-}
-.form-container1 {
-    width: 600px;
-    margin: 0 auto;
-  
-    
-    
-    justify-content: center;
+    background: #ecf0f3;
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
 }
 
-.form-title {
-    font-size: 35px;
-    color: #2A414F;
-    font-weight: 400;
+
+.login-title {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: #1da1f2;
+    letter-spacing: 1px;
 }
 
-.input-group{
-    margin-bottom: 20px;
+.login-form {
+    text-align: left;
+    margin-top: 30px;
 }
-/* 
-.input-group label {
+
+.login-container label,
+.login-container input,
+.login-container button {
     display: block;
-    margin-left: 5px;
-} */
-
-.input-group input {
-    width: 415px;
-    height: 55px;
-    border: 1px solid #95A0A7;
+    width: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
     box-sizing: border-box;
-    border-radius: 5px;
-    font-size: 24px;
-    padding-left: 5px;
 }
 
-.form-submit{
-    width: 415px;
-    height: 55px;
-    background-color: rgba(0, 251, 104, 0.3);
-    border-radius: 5px;
-    border: none;
-    font-size: 20px;
+.login-container label {
+    margin-bottom: 4px;
+    color: gray;
+    margin: 15px 0 5px 5px;
+    
+}
+
+.login-container input::placeholder {
+    color: gray;
+}
+
+.login-container input {
+    background: #ecf0f3;
+    margin: 15px 0 0 0;
+    padding: 10px;
+    padding-left: 20px;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 50px;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+
+.login-container button {
+    align-items: center;
+    text-align: center;
+    
+    color: white;
+    margin-top: 20px;
+    background: #1da1f2;
+    height: 40px;
+    border-radius: 20px;
     cursor: pointer;
+    font-weight: 900;
+    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+    transition: 0.5s;
+}
+
+.login-container button:hover {
+    box-shadow: none;
+}
+
+
+.error-message{
+    font-size: 12px;
+    color: red;
+    margin:10px;
+}
+.error-message::before{
+    content: "❌ ";
 }
 .form-submit:hover{
-    background-color: rgba(255, 153, 0, 0.5);
+color: #1da1f2;
 }
-
-.form-link{
-    color: #FF9900;
-    text-decoration: none;
-}
-form img{
-    cursor: pointer
+.form-link:hover{
+    color: #1da1f2;
 }

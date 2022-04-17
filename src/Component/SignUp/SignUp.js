@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../Firebase/Firebase.init';
+import '../Login/Login.css'
 
 
 const SignUp = () => {
@@ -54,10 +55,10 @@ const SignUp = () => {
     }
 
     return (
-        <div className='form-container bg-info '>
+        <div className='login-container bg-info '>
             <div>
-                <h2 className='form-title'>Sign Up</h2>
-                <form onSubmit={handleCreateUser}>
+                <h2 className='form-title text-center text-4xl'>Sign Up</h2>
+                <form className='login-form' onSubmit={handleCreateUser}>
                     <div className="input-group">
                         
                         <input onBlur={handleName} type="name" name="name" placeholder='Name' id="" required/>
@@ -81,7 +82,7 @@ const SignUp = () => {
                     <p style={{color: 'red'}}>{error}</p>
                     <input className='form-submit' type="submit" value="Sign Up"  required/>
                 </form>
-                <p>
+                <p className='text-center mt-2'>
                     Already Have an account? <Link className='form-link' to="/login">Login</Link>
                 </p>
             </div>

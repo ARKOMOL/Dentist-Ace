@@ -12,7 +12,7 @@ const ServiceDetails = ({services,handleAddToCheckout}) => {
         <h1 className='text-2xl text-gray-600 px-3'>{name}</h1>
         <h1 className='text-2xl text-gray-600 px-3'>{price}</h1>
         <h3>{description}</h3>
-            <button onClick={()=> navigate('/checkout')}>Checkout</button>
+            <button className='px-4 py-1 outline-0  bg-cyan-400 rounded-full' onClick={()=> navigate('/checkout')}>Checkout</button>
         </div>
      
     </div>

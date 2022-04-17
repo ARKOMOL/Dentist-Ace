@@ -57,10 +57,10 @@ const Login = () => {
 
     return (
         <div>
-        <div className='form-container '>
+        <div className='login-container '>
             <div>
-                <h2 className='form-title'>Login</h2>
-                <form onSubmit={handleUserSignIn}>
+                <h2 className='form-title text-center text-4xl'>Login</h2>
+                <form className='login-form' onSubmit={handleUserSignIn}>
                     <div className="input-group ms-5">
                         <input ref={emailRef} type="email" name="email" placeholder='Email' id="" required />
                     </div>
@@ -77,8 +77,10 @@ const Login = () => {
                 </form>
         
                 <p>
-                    New to Ema-John? <Link className='form-link' to="/signup">Create an account</Link>
+                    New to Dentist Ace? <Link className='form-link' to="/signup">Create an account</Link>
                 </p>
+                <button  onClick={signInWithGoogle}> Google</button>
+
             </div>
         </div>
              
@@ -89,7 +91,6 @@ const Login = () => {
            <span>--------------</span>
            </div>
     <div>
-    <button> <Link to='' className=''>  <img  onClick={signInWithGoogle} className='' style={{width:50}}  src={logo} alt="" /></Link> Google</button>
     </div>
        </div>
         </div>
