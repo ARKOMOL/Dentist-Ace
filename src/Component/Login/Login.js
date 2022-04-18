@@ -1,5 +1,5 @@
 import React, {  useRef } from 'react';
-import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithFacebook, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -7,7 +7,6 @@ import './Login.css';
 
 import auth from '../../Firebase/Firebase.init';
 import Spinner from '../Spinner/Spinner';
-import { sendPasswordResetEmail } from 'firebase/auth';
 
 const Login = () => {
   
@@ -26,6 +25,9 @@ const Login = () => {
     const passRef = useRef('');
 
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+    const [signInWithFacebook, fUser, fLoading, fError] = useSignInWithFacebook(auth);
+
+
     if (gLoading) {
     return <Spinner/>
 }
@@ -37,6 +39,9 @@ const Login = () => {
         navigate(from,{replace:true})
     }
     if (gUser) {
+        navigate(from,{replace:true})
+    }
+    if (fUser) {
         navigate(from,{replace:true})
     }
 
@@ -83,6 +88,7 @@ const Login = () => {
                 </p>
                 <button onClick={resetPassword}>reset password</button> 
                 <button  onClick={()=> signInWithGoogle()}> Google</button>
+                <button  onClick={()=> signInWithFacebook()}> Facebook</button>
                    
             </div>
         </div>
