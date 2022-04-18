@@ -14,6 +14,7 @@ import Login from './Component/Login/Login';
 import SignUp from './Component/SignUp/SignUp';
 import RequireAuth from './Component/RequireAuth/RequireAuth';
 import NotFound from './NotFound/NotFound';
+import Footer from './Component/Footer/Footer';
 
 
 
@@ -45,7 +46,7 @@ function App() {
          <Route path='/signup' element={<SignUp/>}/>
          <Route path='*' element={<NotFound/>} />
       </Routes>
-
+<Footer/>
     </div>
   );
 }
