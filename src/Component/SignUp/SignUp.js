@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../Firebase/Firebase.init';
-import '../Login/Login.css'
-
+import '../Login/Login.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignUp = () => {
     const [name, setName] = useState('');
@@ -14,7 +15,7 @@ const SignUp = () => {
     const [error, setError] = useState('');
     const navigate = useNavigate();
 
-    const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth)
+    const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification: true})
 
     const handleName = event =>{
         setName(event.target.value);
@@ -41,8 +42,10 @@ const SignUp = () => {
     }
 
     const handleCreateUser = event =>{
+
         event.preventDefault();
-        if(password !== confirmPassword){
+         toast('Email sent');
+         if(password !== confirmPassword){
             setError('Your two passwords did not match');
             return;
         }
@@ -51,12 +54,13 @@ const SignUp = () => {
             return;
         }
         
+        
         createUserWithEmailAndPassword(email, password);
     }
 
     return (
+    <div>
         <div className='login-container bg-info '>
-            <div>
                 <h2 className='form-title text-center text-4xl'>Sign Up</h2>
                 <form className='login-form' onSubmit={handleCreateUser}>
                     <div className="input-group">
@@ -86,7 +90,8 @@ const SignUp = () => {
                     Already Have an account? <Link className='form-link' to="/login">Login</Link>
                 </p>
             </div>
-        </div>
+            <ToastContainer/>
+     </div>
     );
 };
 

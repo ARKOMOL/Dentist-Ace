@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../Firebase/Firebase.init';
 import '../Login/Login.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const CheckOut = ({checkOut}) => {
@@ -39,13 +41,14 @@ const CheckOut = ({checkOut}) => {
 
     const handleCreateUser = event =>{
         event.preventDefault();
+        toast(' thank you for the booking.')
         
       
     }
 
     return (
-        <div className='login-container bg-info '>
             <div>
+        <div className='login-container bg-info '>
                 <h2 className='form-title text-center text-3xl'>Checkout Page</h2>
                 <form className='login-form' onSubmit={handleCreateUser}>
                     <div className="input-group">
@@ -60,17 +63,26 @@ const CheckOut = ({checkOut}) => {
                    
                     <div className="input-group">
                        
-                        <input onBlur={handleAddress} type="password" name="confirm-password" id=""  placeholder='Address' />
+                        <input onBlur={handleAddress} type="text" name="address" id=""  placeholder='Address' />
                     </div>
                     <div className="input-group">
                        
                         <input onBlur={handlePhone} type="text" name="phone" id=""  placeholder='Phone' />
                     </div>
                     <p style={{color: 'red'}}>{error}</p>
-                    <input className='form-submit' type="submit" value="Continue"  required/>
+                    <input className='form-submit text-2xl' type="submit" value="Submit"  required/>
+                   
                 </form>
-              
+                
             </div>
+            <ToastContainer
+                    position="top-center"
+                    autoClose={4000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    pauseOnFocusLoss
+                    pauseOnHover
+                    />
         </div>
     );
 };

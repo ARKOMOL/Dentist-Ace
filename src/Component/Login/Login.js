@@ -1,15 +1,15 @@
-import React, { useReducer, useRef, useState } from 'react';
+import React, {  useRef } from 'react';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Login.css';
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import logo from '../Login/google.webp'
-import auth from '../../Firebase/Firebase.init';
 
-const googleProvider = new GoogleAuthProvider();
+import auth from '../../Firebase/Firebase.init';
+import Spinner from '../Spinner/Spinner';
+import { sendPasswordResetEmail } from 'firebase/auth';
+
 const Login = () => {
-    // const [email, setEmail] = useState('');
-    // const [password, setPassword] = useState('');
   
     const [
         signInWithEmailAndPassword,
@@ -17,35 +17,21 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
-    
-
-    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
-
-    // const navigate = useNavigate();
-    // const location = useLocation();
-    // let from = location.state?.from?.pathname || '/';
-
     const navigate =useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || '/';
-    // let gFrom = location.state?.from?.pathname || '/';
 
- /*google login  */
-//  const signInWithGoogle = () =>{
-//      signInWithPopup(auth,googleProvider)
-//      .then(result =>{
-//          const user = result.user;
-//          console.log(user);
-//      })
-  
-//  }
-
-    const emailRef = useRef('')
+    const emailRef = useRef('');
     const passRef = useRef('');
 
-    // if (user) {
-    //     navigate(from, {replace: true});
-    // }
+    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+    if (gLoading) {
+    return <Spinner/>
+}
+
+ 
+
+  
     if (user) {
         navigate(from,{replace:true})
     }
@@ -60,6 +46,16 @@ const Login = () => {
         signInWithEmailAndPassword(email, password);
     }
 
+    const resetPassword = async () => {
+        const email = emailRef.current.value;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Sent email');
+        }
+        else{
+            toast('please enter your email address');
+        }
+    }
     return (
         <div>
         <div className='login-container '>
@@ -67,7 +63,7 @@ const Login = () => {
                 <h2 className='form-title text-center text-4xl'>Login</h2>
                 <form className='login-form' onSubmit={handleUserSignIn}>
                     <div className="input-group ms-5">
-                        <input ref={emailRef} type="email" name="email" placeholder='Email' id="" required />
+                        <input ref={emailRef} type="email" name="email" placeholder='Email'  required />
                     </div>
                     <div className="input-group ms-5">
                         
@@ -84,20 +80,13 @@ const Login = () => {
                 <p>
                     New to Dentist Ace? <Link className='form-link' to="/signup">Create an account</Link>
                 </p>
+                <button onClick={resetPassword}>reset password</button> 
                 <button  onClick={()=> signInWithGoogle()}> Google</button>
-
+                   
             </div>
         </div>
-             
-       <div className=' form-container1 '>
-           <div className=' d-flex  text-white'>
-           <span>--------------</span>
-           <span>or</span>
-           <span>--------------</span>
-           </div>
-    <div>
-    </div>
-       </div>
+        <ToastContainer/>
+     
         </div>
     );
 };

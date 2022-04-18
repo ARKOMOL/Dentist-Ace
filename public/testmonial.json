@@ -1,0 +1,27 @@
+[
+    {    "id":1,
+        "name":"Md Razu",
+        "ratings":"⭐⭐⭐⭐⭐",
+        "description":"One smile dental lounge... His service is mind blowing... He is also try serve the best treatment to patients his ability. I am satisfied on his treatment... I hope you will get best afford one this treatment area...you are welcome to the one smile dental lounge...",
+        "img":"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    },
+    {   "id":2,
+        "name":"Md Nurul Islam",
+        "ratings":"⭐⭐⭐⭐⭐",
+        "description":"best dental one smile dental lounge.ami aii Dental tekea treatment neia happy. Aii dental a sovai onek antorek. Friendly tiper. Thank you one smile dental lounge..",
+        "img":"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    },
+    {   "id":3,
+        "name":"Md Rubel",
+        "ratings":"⭐⭐⭐⭐⭐",
+        "description":"Doctor Mushfiqur Ruhan He is just awesome, passionate, polite and modern dentist in Bangladesh that I have ever seen. I'm also patient of him. My two teeth condition was very. Alhamdulillah because of his intelligence treatment I got back my teeth",
+        "img":"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    },
+    {   "id":4,
+        "name":"Md Kalam",
+        "ratings":"⭐⭐⭐⭐⭐",
+        "description":"Excellent customer service, very professional staffs. He is committed to provide the best possible experience to all their patients. I am very satisfied with their treatment and overall service and definitely recommend Uk Dental Clinic by Dr Ruhan to everyone for their dental treatment. All the best.",
+        "img":"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    }
+  
+]

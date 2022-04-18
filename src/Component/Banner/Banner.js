@@ -2,8 +2,8 @@ import React from 'react';
 import banner from '../images/baner.jpg'
 const Banner = () => {
     return (
-        <div className='container mx-auto py-6  mb-5 flex flex-row '>
-            <div className="banner-text px-8">
+        <div className='container mx-auto py-6  mb-5 md:flex  md:flex-row '>
+            <div className="banner-text px-8 md:my-3">
                 <h3 className='text-2xl pb-4 text-sky-400'>
                     WELCOME TO DENTIST ACE 
                 </h3>

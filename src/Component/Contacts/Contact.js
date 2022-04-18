@@ -1,9 +1,10 @@
 import React from 'react';
+import NotFound from '../../NotFound/NotFound';
 
 const Contact = () => {
     return (
         <div>
-            <h1>This is Abdur Rashid</h1>
+            <NotFound/>
         </div>
     );
 };

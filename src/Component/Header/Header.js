@@ -12,14 +12,14 @@ const Header = () => {
         signOut(auth);
     }
     return (
-        <div className='sticky toPp-0 bg-slate-200 px-12 py-8 flex justify-center md:justify-between'>
+        <div className='sticky top-0 sm:flex sm:flex-auto bg-slate-200 px-12 py-8 flex justify-center md:justify-between'>
             <div className='hidden md:block'>
                 <Link to='/' className='font-sans font bold text-xl text-grey-600'>
                     Dentist Ace
                 </Link>
             </div>
 
-            <div className="flex gap-4 text-xl">
+            <div className="flex gap-4 lg:text-xl ">
             <CustomLink to="/">Home</CustomLink>
             {/* <CustomLink to="/serivices">Services</CustomLink> */}
             <CustomLink to="/blogs">Blogs</CustomLink>
@@ -28,7 +28,7 @@ const Header = () => {
             <CustomLink to="/about">About</CustomLink>
             {
                     user ?
-                    <button className='bg-sky-500 rounded-full px-2 ' onClick={handleSignOut}>Sign out</button>
+                    <button className='bg-sky-500 rounded-xl px-2 ' onClick={handleSignOut}>Signout</button>
                     :
                     <CustomLink to="/login">Login</CustomLink>}
             </div>
