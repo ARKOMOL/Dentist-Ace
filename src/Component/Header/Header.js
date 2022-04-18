@@ -21,10 +21,8 @@ const Header = () => {
 
             <div className="flex gap-4 lg:text-xl ">
             <CustomLink to="/">Home</CustomLink>
-            {/* <CustomLink to="/serivices">Services</CustomLink> */}
             <CustomLink to="/blogs">Blogs</CustomLink>
-            
-            <CustomLink to="/contact">Contact</CustomLink>
+
             <CustomLink to="/about">About</CustomLink>
             {
                     user ?

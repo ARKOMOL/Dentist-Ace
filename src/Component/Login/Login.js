@@ -1,5 +1,5 @@
 import React, {  useRef } from 'react';
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -17,6 +17,7 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
     const navigate =useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || '/';
@@ -29,7 +30,7 @@ const Login = () => {
     return <Spinner/>
 }
 
- 
+
 
   
     if (user) {
