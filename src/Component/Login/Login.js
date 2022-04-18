@@ -87,8 +87,8 @@ const Login = () => {
                     New to Dentist Ace? <Link className='form-link' to="/signup">Create an account</Link>
                 </p>
                 <button onClick={resetPassword}>reset password</button> 
-                <button  onClick={()=> signInWithGoogle()}> Google</button>
-                <button  onClick={()=> signInWithFacebook()}> Facebook</button>
+                <button className='hover:bg-sky-700' onClick={()=> signInWithGoogle()}> Google</button>
+                {/* <button  onClick={()=> signInWithFacebook()}> Facebook</button> */}
                    
             </div>
         </div>

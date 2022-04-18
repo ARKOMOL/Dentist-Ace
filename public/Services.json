@@ -3,36 +3,36 @@
         "name":"Root Canal",
         "price":"100$",
         "img": "https://images.unsplash.com/photo-1643401142249-84ef35c123c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-        "description":"I can do it smootly"
+        "description":"Dental cavities are holes in teeth that form when acid in the mouth erodes tooth enamel. Untreated cavities can lead to toothaches, infection and tooth extractions."
     },
     { "id":2,
         "name":"ALignment Teeth",
         "price":"100$",
-        "img": "https://images.unsplash.com/photo-1643401142249-84ef35c123c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-        "description":"I can do it smootly"
+        "img": "https://dentistry.uic.edu/wp-content/uploads/sites/741/2020/10/iStock-501427146-1090x595.jpg",
+        "description":"If you’re an adult considering treatment options for getting your teeth straightened — you’re in luck "
     },
     { "id":3,
         "name":"Cosmetic Teeth",
         "price":"100$",
-        "img": "https://images.unsplash.com/photo-1643401142249-84ef35c123c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-        "description":"I can do it smootly"
+        "img": "https://media.istockphoto.com/photos/treatment-and-whitening-of-teeth-dental-crowns-before-and-after-picture-id1206712036?k=20&m=1206712036&s=612x612&w=0&h=v0yAqs9CNVcurP9FbK9hh8auhR3MCwSrkj6m2Zc-n_c=",
+        "description":"If your teeth are stained, discolored, worn, chipped, broken, misaligned, misshapen, or have gaps between them, modern cosmetic dentistry can give you a better smile. "
     },
     { "id":4,
         "name":"Oral Hygiene",
         "price":"100$",
-        "img": "https://images.unsplash.com/photo-1643401142249-84ef35c123c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-        "description":"I can do it smootly"
+        "img": "https://mitchamdental.com.au/wp-content/uploads/2020/01/Oral-Hygiene-768x432.jpg",
+        "description":"Oral hygiene is the practice of keeping one's mouth clean and free of disease and other problems (e.g. bad breath) by regular brushing of the teeth (dental hygiene) and cleaning between the teeth"
     },
     { "id":5,
         "name":"Live Advisory",
         "price":"100$",
-        "img": "https://images.unsplash.com/photo-1643401142249-84ef35c123c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-        "description":"I can do it smootly"
+        "img": "https://media.istockphoto.com/photos/african-american-dentist-teaching-small-boy-how-to-brush-teeth-picture-id1314828685?b=1&k=20&m=1314828685&s=170667a&w=0&h=Oxn_EIKZdIPy4vSi9fAuT4Fm3EGhf5c8-E0mCPynDVs=",
+        "description":"Are you looking for Best Dentist or Dentist near me or Best Dental Clinic in  your area. I will give you the best advise for your good teeth"
     },
     { "id":6,
         "name":"Cavity Inspection",
         "price":"100$",
-        "img": "https://images.unsplash.com/photo-1643401142249-84ef35c123c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "img": "https://thumbs.dreamstime.com/b/portrait-little-boy-opening-his-mouth-wide-inspection-oral-cavity-dentist-163064853.jpg",
         "description":"Nowdays Cavity problem is a big problem for everybody.So you have to checkup your teeth and i can inspect your cavity problem"
     }
 ]
